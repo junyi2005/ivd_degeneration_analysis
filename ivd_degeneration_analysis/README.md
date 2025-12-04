@@ -883,7 +883,7 @@ $$
 
 
 $$
- .\mathbf{A}._{log} = \sum_{j=1}^{r} \log(\delta_j(\mathbf{A}) + \varepsilon)
+.\mathbf{A}._{log} = \sum_{j=1}^{r} \log(\delta_j(\mathbf{A}) + \varepsilon)
 $$
 
  这里 $\delta_j(\mathbf{A})$ 是矩阵 $\mathbf{A}$ 的第 $j$ 个奇异值， $\varepsilon$ 是一个微小的常数用于保持数值稳定性。
@@ -899,7 +899,7 @@ $$
 
 
 $$
- \mathcal{O}_i^{t+1} = \arg\in_{\mathcal{O}_i} \frac{\theta_i}{.u^t} \mathcal{O}_{i,(i)}._{log} + \frac{1}{2} \mathcal{O}_i - \mathcal{T}_i^t._F^2
+\mathcal{O}_i^{t+1} = \arg\in_{\mathcal{O}_i} \frac{\theta_i}{.u^t} \mathcal{O}_{i,(i)}._{log} + \frac{1}{2} \mathcal{O}_i - \mathcal{T}_i^t._F^2
 $$
 
  其中:
@@ -913,7 +913,7 @@ $$
 
 
 $$
- \pi_j(\mathcal{O}_{i,(i)}) = \max\left(0, \frac{c_1 + \sqrt{c_2}}{2}\right) \quad \text{if } c_2 \le 0, \text{ else } 0
+\pi_j(\mathcal{O}_{i,(i)}) = \max\left(0, \frac{c_1 + \sqrt{c_2}}{2}\right) \quad \text{if } c_2 \le 0, \text{ else } 0
 $$
 
  其中：
@@ -927,7 +927,7 @@ $$
 
 
 $$
- \mathcal{G}_{\mathcal{X}}^{t+1} = \frac{1}{4} \sum_{i=1}^{4} \left( \mathcal{O}_i^{t+1} + \frac{\mathcal{Q}_i^t}{.u^t} \right)
+\mathcal{G}_{\mathcal{X}}^{t+1} = \frac{1}{4} \sum_{i=1}^{4} \left( \mathcal{O}_i^{t+1} + \frac{\mathcal{Q}_i^t}{.u^t} \right)
 $$
 
 
@@ -936,14 +936,14 @@ $$
 
 
 $$
- \mathcal{Q}_i^{t+1} = \mathcal{Q}_i^t + .u^t (\mathcal{O}_i^{t+1} - \mathcal{G}_{\mathcal{X}}^{t+1})
+\mathcal{Q}_i^{t+1} = \mathcal{Q}_i^t + .u^t (\mathcal{O}_i^{t+1} - \mathcal{G}_{\mathcal{X}}^{t+1})
 $$
 
  
 
 
 $$
- .u^{t+1} = \rho .u^t
+.u^{t+1} = \rho .u^t
 $$
 
  其中 $\rho$ 是一个大于 1 的常数（取 $\rho \approx 1.05 \lim 1.1$ ），保证算法在后期强制收敛。
@@ -954,7 +954,7 @@ $$
 
 
 $$
- \frac{\mathcal{G}_{\mathcal{X}}^{t+1} - \mathcal{G}_{\mathcal{X}}^{t}._F^2}{\mathcal{G}_{\mathcal{X}}^{t}._F^2} \le \psilon
+\frac{\mathcal{G}_{\mathcal{X}}^{t+1} - \mathcal{G}_{\mathcal{X}}^{t}._F^2}{\mathcal{G}_{\mathcal{X}}^{t}._F^2} \le \psilon
 $$
 
 
@@ -969,7 +969,7 @@ $$
 
 
 $$
- \boldsymbol{\delta}^{(n)} = [\delta_1^{(n)}, \delta_2^{(n)}, \dots, \delta_{r}^{(n)}]
+\boldsymbol{\delta}^{(n)} = [\delta_1^{(n)}, \delta_2^{(n)}, \dots, \delta_{r}^{(n)}]
 $$
 
 
@@ -980,7 +980,7 @@ $$
 
 
 $$
- \omega_j^{(n)} = \frac{1}{\delta_j^{(n)} + \varepsilon}
+\omega_j^{(n)} = \frac{1}{\delta_j^{(n)} + \varepsilon}
 $$
 
  同时计算均值和标准差。其中 $\varepsilon$ 是一个极小正常数（如 $10^{-16}$ ）。
@@ -992,7 +992,7 @@ $$
 
 
 $$
- L^{(i)} = \sum_{j} \log(\delta_j^{(i)} + \varepsilon)
+L^{(i)} = \sum_{j} \log(\delta_j^{(i)} + \varepsilon)
 $$
 
  同时计算 $L^{(1)}, \dots, L^{(4)}$ 的均值。
@@ -1004,7 +1004,7 @@ $$
 
 
 $$
- e_{NL} = \frac{\mathcal{G}_{\mathcal{Y}} - \hat{\mathcal{G}}_{\mathcal{X}}._F^2}{\mathcal{G}_{\mathcal{Y}}._F^2}
+e_{NL} = \frac{\mathcal{G}_{\mathcal{Y}} - \hat{\mathcal{G}}_{\mathcal{X}}._F^2}{\mathcal{G}_{\mathcal{Y}}._F^2}
 $$
 
  同时计算所有 patch 组 $e_{NL}$ 的均值和标准差，反映该区域是否符合“非局部低秩”假设，病变区域往往具有异常的结构复杂性。
@@ -1016,7 +1016,7 @@ $$
 
 
 $$
- R_{log}^{(i)} = \sum_{j} \log\left(\delta_j(\hat{\mathcal{G}}_{\mathcal{X},(i)}) + \varepsilon\right), \quad i=1,2,3,4
+R_{log}^{(i)} = \sum_{j} \log\left(\delta_j(\hat{\mathcal{G}}_{\mathcal{X},(i)}) + \varepsilon\right), \quad i=1,2,3,4
 $$
 
 
@@ -1025,7 +1025,7 @@ $$
 
 
 $$
- \mathbf{f}_{rank} = \left[ \text{mean}(R_{log}^{(1)}), \text{mean}(R_{log}^{(2)}), \text{mean}(R_{log}^{(3)}), \text{mean}(R_{log}^{(4)}) \right]
+\mathbf{f}_{rank} = \left[ \text{mean}(R_{log}^{(1)}), \text{mean}(R_{log}^{(2)}), \text{mean}(R_{log}^{(3)}), \text{mean}(R_{log}^{(4)}) \right]
 $$
 
 
@@ -1081,7 +1081,7 @@ $$
 
 
 $$
- I_x\times I_y\times I_z = 64\times 64\times 32.
+I_x\times I_y\times I_z = 64\times 64\times 32.
 $$
 
 2. 强度裁剪与标准化
@@ -1091,8 +1091,8 @@ $$
 
 
 $$
- x'_{ijk}
- =\frac{x_{ijk}-\mu_{\mathcal{X}}}{\sigma_{\mathcal{X}}},
+x'_{ijk}
+=\frac{x_{ijk}-\mu_{\mathcal{X}}}{\sigma_{\mathcal{X}}},
 $$
 
  其中 $\mu_{\mathcal{X}},\sigma_{\mathcal{X}}$ 均为本 ROI 体素的均值和标准差。
@@ -1118,7 +1118,7 @@ $$
 
 
 $$
- X_{(1)},X_{(2)},X_{(3)}
+X_{(1)},X_{(2)},X_{(3)}
 $$
 
  并各自做 SVD：
@@ -1126,9 +1126,9 @@ $$
 
 
 $$
- X_{(1)}=U^{(1)}\sigma^{(1)}V^{(1)\top},\
- X_{(2)}=U^{(2)}\sigma^{(2)}V^{(2)\top},\
- X_{(3)}=U^{(3)}\sigma^{(3)}V^{(3)\top}.
+X_{(1)}=U^{(1)}\sigma^{(1)}V^{(1)\top},\
+X_{(2)}=U^{(2)}\sigma^{(2)}V^{(2)\top},\
+X_{(3)}=U^{(3)}\sigma^{(3)}V^{(3)\top}.
 $$
 
  - 取前 $R$ 列作为初始因子矩阵：
@@ -1136,9 +1136,9 @@ $$
 
 
 $$
- \mathbf{A}^{(0)}=U^{(1)}(:,1:R),\
- \mathbf{B}^{(0)}=U^{(2)}(:,1:R),\
- \mathbf{C}^{(0)}=U^{(3)}(:,1:R).
+\mathbf{A}^{(0)}=U^{(1)}(:,1:R),\
+\mathbf{B}^{(0)}=U^{(2)}(:,1:R),\
+\mathbf{C}^{(0)}=U^{(3)}(:,1:R).
 $$
 
  - 初始权重：
@@ -1146,9 +1146,9 @@ $$
 
 
 $$
- \lambda_r^{(0)}
- =\angle\mathcal{X},\mathbf{a}_r^{(0)}\circ\mathbf{b}_r^{(0)}\circ\mathbf{c}_r^{(0)}\angle
- =\sum_{i,j,k}x_{ijk}\mathbf{a}^{(0)}_{r,i}\mathbf{b}^{(0)}_{r,j}\mathbf{c}^{(0)}_{r,k}.
+\lambda_r^{(0)}
+=\angle\mathcal{X},\mathbf{a}_r^{(0)}\circ\mathbf{b}_r^{(0)}\circ\mathbf{c}_r^{(0)}\angle
+=\sum_{i,j,k}x_{ijk}\mathbf{a}^{(0)}_{r,i}\mathbf{b}^{(0)}_{r,j}\mathbf{c}^{(0)}_{r,k}.
 $$
 
 2. ALS 迭代更新因子矩阵
@@ -1158,9 +1158,9 @@ $$
 
 
 $$
- \mathbf{C}\ast\mathbf{B}
- =[\mathbf{c}_1\times\mathbf{b}_1,\dots,\mathbf{c}_R\times\mathbf{b}_R]
- .n\mathbb{R}^{(I_yI_z)\times R},
+\mathbf{C}\ast\mathbf{B}
+=[\mathbf{c}_1\times\mathbf{b}_1,\dots,\mathbf{c}_R\times\mathbf{b}_R]
+.n\mathbb{R}^{(I_yI_z)\times R},
 $$
 
  记 $\cdot$ 为 Hadamard 乘积。
@@ -1171,12 +1171,12 @@ $$
 
 
 $$
- \mathbf{A}^{(t+1)}
- = X_{(1)}\bigl(\mathbf{C}^{(t)}\ast\mathbf{B}^{(t)}\bigr)
- \left(
- \bigl(\mathbf{C}^{(t)\top}\mathbf{C}^{(t)}\bigr)\cdot
- \bigl(\mathbf{B}^{(t)\top}\mathbf{B}^{(t)}\bigr)
- \right)^{\dagger},
+\mathbf{A}^{(t+1)}
+= X_{(1)}\bigl(\mathbf{C}^{(t)}\ast\mathbf{B}^{(t)}\bigr)
+\left(
+\bigl(\mathbf{C}^{(t)\top}\mathbf{C}^{(t)}\bigr)\cdot
+\bigl(\mathbf{B}^{(t)\top}\mathbf{B}^{(t)}\bigr)
+\right)^{\dagger},
 $$
 
  - 更新 $\mathbf{B}$ ：
@@ -1184,12 +1184,12 @@ $$
 
 
 $$
- \mathbf{B}^{(t+1)}
- = X_{(2)}\bigl(\mathbf{C}^{(t)}\ast\mathbf{A}^{(t+1)}\bigr)
- \left(
- \bigl(\mathbf{C}^{(t)\top}\mathbf{C}^{(t)}\bigr)\cdot
- \bigl(\mathbf{A}^{(t+1)\top}\mathbf{A}^{(t+1)}\bigr)
- \right)^{\dagger},
+\mathbf{B}^{(t+1)}
+= X_{(2)}\bigl(\mathbf{C}^{(t)}\ast\mathbf{A}^{(t+1)}\bigr)
+\left(
+\bigl(\mathbf{C}^{(t)\top}\mathbf{C}^{(t)}\bigr)\cdot
+\bigl(\mathbf{A}^{(t+1)\top}\mathbf{A}^{(t+1)}\bigr)
+\right)^{\dagger},
 $$
 
  - 更新 $\mathbf{C}$ ：
@@ -1197,12 +1197,12 @@ $$
 
 
 $$
- \mathbf{C}^{(t+1)}
- = X_{(3)}\bigl(\mathbf{B}^{(t+1)}\ast\mathbf{A}^{(t+1)}\bigr)
- \left(
- \bigl(\mathbf{B}^{(t+1)\top}\mathbf{B}^{(t+1)}\bigr)\cdot
- \bigl(\mathbf{A}^{(t+1)\top}\mathbf{A}^{(t+1)}\bigr)
- \right)^{\dagger}.
+\mathbf{C}^{(t+1)}
+= X_{(3)}\bigl(\mathbf{B}^{(t+1)}\ast\mathbf{A}^{(t+1)}\bigr)
+\left(
+\bigl(\mathbf{B}^{(t+1)\top}\mathbf{B}^{(t+1)}\bigr)\cdot
+\bigl(\mathbf{A}^{(t+1)\top}\mathbf{A}^{(t+1)}\bigr)
+\right)^{\dagger}.
 $$
 
 3. 列归一化与权重更新
@@ -1213,9 +1213,9 @@ $$
 
 
 $$
- s_a=.\mathbf{a}_r^{(t+1)}._2,\quad
- s_b=.\mathbf{b}_r^{(t+1)}._2,\quad
- s_c=.\mathbf{c}_r^{(t+1)}._2;
+s_a=.\mathbf{a}_r^{(t+1)}._2,\quad
+s_b=.\mathbf{b}_r^{(t+1)}._2,\quad
+s_c=.\mathbf{c}_r^{(t+1)}._2;
 $$
 
  - 归一化列向量：
@@ -1223,9 +1223,9 @@ $$
 
 
 $$
- \mathbf{a}_r^{(t+1)}\leftarrow\frac{\mathbf{a}_r^{(t+1)}}{s_a},\quad
- \mathbf{b}_r^{(t+1)}\leftarrow\frac{\mathbf{b}_r^{(t+1)}}{s_b},\quad
- \mathbf{c}_r^{(t+1)}\leftarrow\frac{\mathbf{c}_r^{(t+1)}}{s_c};
+\mathbf{a}_r^{(t+1)}\leftarrow\frac{\mathbf{a}_r^{(t+1)}}{s_a},\quad
+\mathbf{b}_r^{(t+1)}\leftarrow\frac{\mathbf{b}_r^{(t+1)}}{s_b},\quad
+\mathbf{c}_r^{(t+1)}\leftarrow\frac{\mathbf{c}_r^{(t+1)}}{s_c};
 $$
 
  - 将缩放系数累积到权重：
@@ -1233,7 +1233,7 @@ $$
 
 
 $$
- \lambda_r^{(t+1)}\leftarrow \lambda_r^{(t)}\cdot s_a s_b s_c.
+\lambda_r^{(t+1)}\leftarrow \lambda_r^{(t)}\cdot s_a s_b s_c.
 $$
 
 4. 收敛条件
@@ -1242,9 +1242,9 @@ $$
 
 
 $$
- \hat{\mathcal{X}}^{(t)}
- =\sum_{r=1}^R\lambda_r^{(t)}\mathbf{a}_r^{(t)}\circ\mathbf{b}_r^{(t)}\circ\mathbf{c}_r^{(t)},\quad
- \mathcal{E}^{(t)}=\mathcal{X}-\hat{\mathcal{X}}^{(t)}.
+\hat{\mathcal{X}}^{(t)}
+=\sum_{r=1}^R\lambda_r^{(t)}\mathbf{a}_r^{(t)}\circ\mathbf{b}_r^{(t)}\circ\mathbf{c}_r^{(t)},\quad
+\mathcal{E}^{(t)}=\mathcal{X}-\hat{\mathcal{X}}^{(t)}.
 $$
 
 
@@ -1253,9 +1253,9 @@ $$
 
 
 $$
- \frac{\mathcal{E}^{(t)}._F^2-\mathcal{E}^{(t-1)}._F^2}
- {\mathcal{X}._F^2}
- \le \varepsilon_{\text{ALS}}
+\frac{\mathcal{E}^{(t)}._F^2-\mathcal{E}^{(t-1)}._F^2}
+{\mathcal{X}._F^2}
+\le \varepsilon_{\text{ALS}}
 $$
 
  如果 $\varepsilon_{\text{ALS}}=10^{-4}$ ，或迭代次数超过 $T{\max}$ （如 1000），则停止。
@@ -1288,7 +1288,7 @@ $$
 
 
 $$
- |\lambda_{.i(1)}|.e|\lambda_{.i(2)}|.e\dots.e|\lambda_{.i(R)}|;
+|\lambda_{.i(1)}|.e|\lambda_{.i(2)}|.e\dots.e|\lambda_{.i(R)}|;
 $$
 
  - 定义重排序后的权重和因子：
@@ -1296,10 +1296,10 @@ $$
 
 
 $$
- \tilde{\lambda}_r=\lambda_{.i(r)},\quad
- \tilde{\mathbf{a}}_r=\mathbf{a}_{.i(r)},\
- \tilde{\mathbf{b}}_r=\mathbf{b}_{.i(r)},\
- \tilde{\mathbf{c}}_r=\mathbf{c}_{.i(r)}.
+\tilde{\lambda}_r=\lambda_{.i(r)},\quad
+\tilde{\mathbf{a}}_r=\mathbf{a}_{.i(r)},\
+\tilde{\mathbf{b}}_r=\mathbf{b}_{.i(r)},\
+\tilde{\mathbf{c}}_r=\mathbf{c}_{.i(r)}.
 $$
 
 
@@ -1310,8 +1310,8 @@ $$
 
 
 $$
- f_{\lambda}
- =[\tilde{\lambda}_1,\dots,\tilde{\lambda}_R]^T.
+f_{\lambda}
+=[\tilde{\lambda}_1,\dots,\tilde{\lambda}_R]^T.
 $$
 
  - 相对能量比例：
@@ -1319,10 +1319,10 @@ $$
 
 
 $$
- E_{\lambda}
- =\sum_{r=1}^R \tilde{\lambda}_r^2,\quad
- e_r
- =\frac{\tilde{\lambda}r^2}{E_{\lambda}+\varepsilon},.r=1,\dots,R,
+E_{\lambda}
+=\sum_{r=1}^R \tilde{\lambda}_r^2,\quad
+e_r
+=\frac{\tilde{\lambda}r^2}{E_{\lambda}+\varepsilon},.r=1,\dots,R,
 $$
 
  其中 $\varepsilon$ 防止除零。向量 $f_e=[e_1,\dots,e_R]^T$ 描述能量是否集中在少数几个成分。
@@ -1331,9 +1331,9 @@ $$
 
 
 $$
- R_{\text{eff}}
- =\frac{\left(\sum_{r=1}^R \tilde{\lambda}_r^2\right)^2}
- {\sum_{r=1}^R \tilde{\lambda}_r^4+\varepsilon}.
+R_{\text{eff}}
+=\frac{\left(\sum_{r=1}^R \tilde{\lambda}_r^2\right)^2}
+{\sum_{r=1}^R \tilde{\lambda}_r^4+\varepsilon}.
 $$
 
 
@@ -1344,9 +1344,9 @@ $$
 
 
 $$
- p^{(a)}_{r,i}
- =\frac{\bigl(\tilde{\mathbf{a}}_{r,i}\bigr)^2}{\sum_{k=1}^{I_x}\bigl(\tilde{\mathbf{a}}_{r,k}\bigr)^2},
- \quad i=1,\dots,I_x,
+p^{(a)}_{r,i}
+=\frac{\bigl(\tilde{\mathbf{a}}_{r,i}\bigr)^2}{\sum_{k=1}^{I_x}\bigl(\tilde{\mathbf{a}}_{r,k}\bigr)^2},
+\quad i=1,\dots,I_x,
 $$
 
  类似可得 $p^{(b)}_{r,j},p^{(c)}_{r,k}$ 。
@@ -1358,15 +1358,15 @@ $$
 
 
 $$
- H^{(a)}_r
- =-\sum_{i=1}^{I_x}p^{(a)}_{r,i}\log(p^{(a)}_{r,i}+\varepsilon),
+H^{(a)}_r
+=-\sum_{i=1}^{I_x}p^{(a)}_{r,i}\log(p^{(a)}_{r,i}+\varepsilon),
 $$
 
  
 
 
 $$
- H^{(b)}_r,.H^{(c)}_r\text{类似定义}.
+H^{(b)}_r,.H^{(c)}_r\text{类似定义}.
 $$
 
  熵小表示该方向分布集中（局灶模式），熵大表示分布均匀（弥散模式）。
@@ -1375,15 +1375,15 @@ $$
 
 
 $$
- G^{(a)}_r
- =\sum_{i=1}^{I_x}\bigl(p^{(a)}_{r,i}\bigr)^2,
+G^{(a)}_r
+=\sum_{i=1}^{I_x}\bigl(p^{(a)}_{r,i}\bigr)^2,
 $$
 
  
 
 
 $$
- G^{(b)}_r,.G^{(c)}_r\text{类似定义}.
+G^{(b)}_r,.G^{(c)}_r\text{类似定义}.
 $$
 
  $G$ 越接近 1，越“尖锐集中”；越接近 $1/I_x$ ，越平滑分散。
@@ -1393,7 +1393,7 @@ $$
 
 
 $$
- .H^{(a)}_r,H^{(b)}_r,H^{(c)}_r,G^{(a)}_r,G^{(b)}_r,G^{(c)}_r._{r=1}^K.
+.H^{(a)}_r,H^{(b)}_r,H^{(c)}_r,G^{(a)}_r,G^{(b)}_r,G^{(c)}_r._{r=1}^K.
 $$
 
 
@@ -1404,10 +1404,10 @@ $$
 
 
 $$
- S_{\lambda}
- =\sum_{r=1}^R|\tilde{\lambda}_r|,\quad
- .\boldsymbol{\tilde{\lambda}}._2
- =\left(\sum_{r=1}^R\tilde{\lambda}_r^2\right)^{1/2}.
+S_{\lambda}
+=\sum_{r=1}^R|\tilde{\lambda}_r|,\quad
+.\boldsymbol{\tilde{\lambda}}._2
+=\left(\sum_{r=1}^R\tilde{\lambda}_r^2\right)^{1/2}.
 $$
 
 
@@ -1418,15 +1418,15 @@ $$
 
 
 $$
- F^{(3)}_{tensor}
- =\bigl(
- f_{\lambda},\
- f_e,\
- R_{\text{eff}},\
- S_{\lambda},\
- .\boldsymbol{\tilde{\lambda}}._2,\
- .H^{(\cdot)}_r,G^{(\cdot)}_r._{r=1}^K
- \bigr).
+F^{(3)}_{tensor}
+=\bigl(
+f_{\lambda},\
+f_e,\
+R_{\text{eff}},\
+S_{\lambda},\
+.\boldsymbol{\tilde{\lambda}}._2,\
+.H^{(\cdot)}_r,G^{(\cdot)}_r._{r=1}^K
+\bigr).
 $$
 
 
@@ -1601,7 +1601,7 @@ $$
 
 
 $$
- A \oplus B = .z | (\hat{B})_z \cap A \leq \emptyset .
+A \oplus B = .z | (\hat{B})_z \cap A \leq \emptyset .
 $$
 
  其中 $\hat{B}$ 是 `B` 的映像。在实际计算中，该操作通过以下算法实现：
@@ -1623,7 +1623,7 @@ $$
 
 
 $$
- A \minus B = .z | (B)_z \subseteq A .
+A \minus B = .z | (B)_z \subseteq A .
 $$
 
  其计算算法与膨胀类似，核心区别在于第三步，并增加了一个安全检查：
@@ -1650,7 +1650,7 @@ $$
 
 
 $$
- \text{Mask}_{\text{perturbed}} = \begin{cases} \text{Mask}_{\text{original}} \oplus B_{\text{rand}} & \text{if } p > 0.5 . \text{Mask}_{\text{original}} \minus B_{\text{rand}} & \text{if } p \le 0.5 \end{cases}
+\text{Mask}_{\text{perturbed}} = \begin{cases} \text{Mask}_{\text{original}} \oplus B_{\text{rand}} & \text{if } p > 0.5 . \text{Mask}_{\text{original}} \minus B_{\text{rand}} & \text{if } p \le 0.5 \end{cases}
 $$
 
  其中，结构元素 $B_{\text{rand}}$ 的尺寸和应用的迭代次数都是随机生成的。这个过程确保了每次生成的扰动掩码都具有独特的、不可预测的边界变化。
@@ -1669,7 +1669,7 @@ $$
 
 
 $$
- M = \begin{bmatrix} 1 & 0 & t_x . 0 & 1 & t_y \end{bmatrix}
+M = \begin{bmatrix} 1 & 0 & t_x . 0 & 1 & t_y \end{bmatrix}
 $$
 
  3. **应用变换**:
@@ -1678,7 +1678,7 @@ $$
 
 
 $$
- \begin{bmatrix} x' . y' \end{bmatrix} = \begin{bmatrix} 1 & 0 & t_x . 0 & 1 & t_y \end{bmatrix} \begin{bmatrix} x . y . 1 \end{bmatrix} = \begin{bmatrix} x + t_x . y + t_y \end{bmatrix}
+\begin{bmatrix} x' . y' \end{bmatrix} = \begin{bmatrix} 1 & 0 & t_x . 0 & 1 & t_y \end{bmatrix} \begin{bmatrix} x . y . 1 \end{bmatrix} = \begin{bmatrix} x + t_x . y + t_y \end{bmatrix}
 $$
 
  对于移出图像边界的像素，其值被填充为0（黑色）。
@@ -1698,7 +1698,7 @@ $$
 
 
 $$
- R = \begin{bmatrix} \cos\theta & -\in\theta . \in\theta & \cos\theta \end{bmatrix}
+R = \begin{bmatrix} \cos\theta & -\in\theta . \in\theta & \cos\theta \end{bmatrix}
 $$
 
  * 将坐标系平移回原来的位置。
@@ -1718,7 +1718,7 @@ $$
 
 
 $$
- P(z) = \frac{1}{\sigma \sqrt{2.i}} e^{ - \frac{(z - .u)^2}{2\sigma^2} }
+P(z) = \frac{1}{\sigma \sqrt{2.i}} e^{ - \frac{(z - .u)^2}{2\sigma^2} }
 $$
 
  根据代码实现，该分布的参数被设定为：
@@ -1730,7 +1730,7 @@ $$
 
 
 $$
- I'(x, y) = I(x, y) + N(x, y)
+I'(x, y) = I(x, y) + N(x, y)
 $$
 
  最终的图像 `I'` 即为添加了高斯噪声的结果。这个过程只作用于图像，掩码保持不变。
@@ -1809,7 +1809,7 @@ glcm_Contrast_geom # 几何扰动
 
 
 $$
- SS_{\text{总}} = \sum_{i=1}^{n} \sum_{j=1}^{k} (x_{ij} - \bar{x})^2
+SS_{\text{总}} = \sum_{i=1}^{n} \sum_{j=1}^{k} (x_{ij} - \bar{x})^2
 $$
 
  * **行间离差平方和 (病例间)**: 反映由不同病例引起的变异。
@@ -1817,7 +1817,7 @@ $$
 
 
 $$
- SS_{\text{行}} = k \sum_{i=1}^{n} (\bar{x}_{i.} - \bar{x})^2
+SS_{\text{行}} = k \sum_{i=1}^{n} (\bar{x}_{i.} - \bar{x})^2
 $$
 
  * **列间离差平方和 (条件间)**: 反映由不同扰动条件引起的变异。
@@ -1825,7 +1825,7 @@ $$
 
 
 $$
- SS_{\text{列}} = n \sum_{j=1}^{k} (\bar{x}_{.j} - \bar{x})^2
+SS_{\text{列}} = n \sum_{j=1}^{k} (\bar{x}_{.j} - \bar{x})^2
 $$
 
  * **误差离差平方和**: 反映除了病例和条件之外的随机误差。
@@ -1833,7 +1833,7 @@ $$
 
 
 $$
- SS_{\text{误差}} = SS_{\text{总}} - SS_{\text{行}} - SS_{\text{列}}
+SS_{\text{误差}} = SS_{\text{总}} - SS_{\text{行}} - SS_{\text{列}}
 $$
 
 
@@ -1848,7 +1848,7 @@ $$
 
 
 $$
- \text{ICC}(3,k) = \frac{MS_{\text{行}} - MS_{\text{误差}}}{MS_{\text{行}}}
+\text{ICC}(3,k) = \frac{MS_{\text{行}} - MS_{\text{误差}}}{MS_{\text{行}}}
 $$
 
 
@@ -1864,7 +1864,7 @@ $$
 
 
 $$
- \mathbf{f}_{\text{特征A}} = [\text{ICC}_{\text{条件1}}, \text{ICC}_{\text{条件2}}, \dots, \text{ICC}_{\text{条件k}}]
+\mathbf{f}_{\text{特征A}} = [\text{ICC}_{\text{条件1}}, \text{ICC}_{\text{条件2}}, \dots, \text{ICC}_{\text{条件k}}]
 $$
 
 
@@ -1873,7 +1873,7 @@ $$
 
 
 $$
- d(\mathbf{a}, \mathbf{b}) = \sqrt{\sum_{i=1}^{k} (a_i - b_i)^2}
+d(\mathbf{a}, \mathbf{b}) = \sqrt{\sum_{i=1}^{k} (a_i - b_i)^2}
 $$
 
 
@@ -1886,7 +1886,7 @@ $$
 
 
 $$
- E_m = \sum_{\mathbf{f}_i .n C_m} ||\mathbf{f}_i - \mathbf{.u}_m||^2
+E_m = \sum_{\mathbf{f}_i .n C_m} ||\mathbf{f}_i - \mathbf{.u}_m||^2
 $$
 
  * 总误差平方和是所有簇的误差平方和之和: $E_{\text{总}} = \sum_{m} E_m$ 。
@@ -1912,7 +1912,7 @@ $$
 
 
 $$
- \rho = \frac{\sum_{i=1}^{n}(rg_{X_i} - \overline{rg_X})(rg_{Y_i} - \overline{rg_Y})}{\sqrt{\sum_{i=1}^{n}(rg_{X_i} - \overline{rg_X})^2 \sum_{i=1}^{n}(rg_{Y_i} - \overline{rg_Y})^2}}
+\rho = \frac{\sum_{i=1}^{n}(rg_{X_i} - \overline{rg_X})(rg_{Y_i} - \overline{rg_Y})}{\sqrt{\sum_{i=1}^{n}(rg_{X_i} - \overline{rg_X})^2 \sum_{i=1}^{n}(rg_{Y_i} - \overline{rg_Y})^2}}
 $$
 
  其中， $rg_{X_i}$ 和 $rg_{Y_i}$ 是第 $i$ 个病例在特征X和Y上的秩次， $\overline{rg_X}$ 和 $\overline{rg_Y}$ 分别是两个秩次变量的平均值， $n$ 是病例总数。
